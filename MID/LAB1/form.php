@@ -7,7 +7,7 @@
     <center>
     <h1 style="color: blue">AIUB</h1>
     <h4 style="color: blue">Registration Form</h4>
-</center>
+    </center>
     <h3>Complete the Registration</h3>
 
         <table>
@@ -62,9 +62,9 @@
             </tr>
             <tr>
                 <td>Comments</td>
-                <td><input type="texbox"></td>
-            </tr>       
-            
+                <td><input type="text"></td>
+            </tr>
+
         </table>
             <button>Register</button>
     
