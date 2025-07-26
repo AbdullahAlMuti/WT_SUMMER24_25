@@ -1,0 +1,35 @@
+body {
+    background-color: aquamarine;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+h3, h4 {
+    text-align: center;
+}
+
+.form-box {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px;
+    background: white;
+    border: 2px solid #333;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+}
