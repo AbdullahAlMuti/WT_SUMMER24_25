@@ -1,80 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Bank Registration</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Student Profile Checker</title>
 </head>
 <body>
 
-    <h1>Bank Management System</h1>
-    <h3>Your Trusted Partner</h3>
-    <h4>Customer Registration Form</h4>
-    <h3>Complete the Registration</h3>
+  <h1>Student Profile Checker</h1>
+  <p>Open your browser console to see the output. Click the button for result popup.</p>
 
-    <div class="form-box">
-        <form>
-            <table>
-                <tr>
-                    <td>Full Name:</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Date of Birth:</td>
-                    <td><input type="date"></td>
-                </tr>
-                <tr>
-                    <td>Email:</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Password:</td>
-                    <td><input type="password"></td>
-                </tr>
-                <tr>
-                    <td>Gender:</td>
-                    <td>
-                        <input type="radio" name="gender"> Male
-                        <input type="radio" name="gender"> Female
-                        <input type="radio" name="gender"> Other
-                    </td>
-                </tr>
-                <tr>
-                    <td>Account Type:</td>
-                    <td>
-                        <select>
-                            <option>Savings</option>
-                            <option>Current</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Initial Deposit:</td>
-                    <td><input type="number"></td>
-                </tr>
-                <tr>
-                    <td>Mobile No:</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>National ID:</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Upload ID Proof:</td>
-                    <td><input type="file"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="checkbox"> I agree to the terms and conditions
-                    </td>
-                </tr>
-                <tr>
-                    <td><button type="submit">Register</button></td>
-                    <td><button type="reset">Clear</button></td>
-                </tr>
-            </table>
-        </form>
-    </div>
+  <script>
+
+    // STEP 1: STORE STUDENT INFORMATION
+    console.log("STEP 1: STUDENT INFORMATION");
+
+    var name = "Hamim";
+    var age = 19;
+    var mathMark = 85;
+    var englishMark = 78;
+    var scienceMark = 92;
+
+    console.log("Name:", name);
+    console.log("Age:", age);
+    console.log("Math Mark:", mathMark);
+    console.log("English Mark:", englishMark);
+    console.log("Science Mark:", scienceMark);
+
+    // STEP 2: CALCULATE TOTAL AND AVERAGE
+    console.log("\nSTEP 2: CALCULATIONS");
+
+    var total = mathMark + englishMark + scienceMark;
+    var average = total / 3;
+
+    console.log("Total Marks:", total);
+    console.log("Average Marks:", average);
+
+    // STEP 3: CHECK ADULT AND PASS STATUS
+    console.log("\nSTEP 3: CONDITIONS");
+
+    var isAdult = age >= 18;
+    var isPassed = average >= 40;
+
+    console.log("Is Adult?", isAdult);
+    console.log("Has Passed?", isPassed);
+
+    // STEP 4: SHOW MARKS USING LOOP
+    console.log("\nSTEP 4: SUBJECT MARKS (LOOP)");
+
+    var subjects = ["Math", "English", "Science"];
+    var marks = [mathMark, englishMark, scienceMark];
+
+    for (var i = 0; i < 3; i++) {
+      console.log(subjects[i] + ":", marks[i]);
+    }
+
+    // STEP 5: FUNCTION TO SHOW SUMMARY
+    console.log("\nSTEP 5: SUMMARY FUNCTION");
+
+    function showSummary() {
+      console.log("----- Student Summary -----");
+      console.log("Name:", name);
+      console.log("Age:", age);
+      console.log("Total:", total);
+      console.log("Average:", average);
+      console.log("Result:", isPassed ? "Passed" : "Failed");
+    }
+
+    showSummary();
+
+    // STEP 6: POPUP BUTTON FUNCTION
+    function showPopup() {
+      alert("Student: " + name +
+            "\nAge: " + age +
+            "\nTotal Marks: " + total +
+            "\nAverage: " + average +
+            "\nResult: " + (isPassed ? "Passed" : "Failed"));
+    }
+
+  </script>
+
+  <br><br>
+  <button onclick="showPopup()">Show Student Result</button>
 
 </body>
 </html>
